@@ -242,7 +242,7 @@ body {
 }
 
 /* Card styling */
-.card {
+.service .card {
   background-color: #1e1e1e;
   border-radius: 15px;
   padding: 20px;
@@ -405,12 +405,26 @@ body {
 .team-section {
   text-align: center;
   padding: 50px;
-  background-color: #000;
+  background-color: #44318d;
 }
 
 .team-section h2 {
-  font-size: 2.7em;
-  margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 45px;
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
+  font-size: 54px;
+}
+.team-section h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background: #e91e63;
+  bottom: -25px;
+  margin-left: -30px;
 }
 
 .team-container {
@@ -421,7 +435,7 @@ body {
 }
 
 .team-member {
-  background-color: rgb(143, 212, 255);
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 250px;
@@ -444,11 +458,12 @@ body {
 .team-member h3 {
   margin: 10px 0;
   font-size: 1.2em;
+  color: #000;
 }
 
 .team-member .role {
   font-weight: bold;
-  color: #eeff01;
+  color: #ff0000;
 }
 
 .team-member .description {
@@ -471,6 +486,125 @@ body {
 .social-icon:hover {
   color: #0077b5;
 }
+.faq-section {
+  background: #ffff00;
+  min-height: 100vh;
+  padding: 10vh 0 0;
+  color: #fff;
+}
+.faq-title h2 {
+  position: relative;
+  margin-bottom: 45px;
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1;
+  color: #000;
+  font-size: 54px;
+}
+.faq-title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background: #e91e63;
+  bottom: -25px;
+  margin-left: -30px;
+}
+.faq-title p {
+  padding: 0 190px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.faq {
+  background: #ffffff;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}
+
+.faq .card {
+  border: none;
+  background: none;
+  border-bottom: 1px dashed #ff0000;
+}
+
+.faq .card .card-header {
+  padding: 0px;
+  border: none;
+  background: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.faq .card .card-header:hover {
+  background: rgba(233, 30, 99, 0.1);
+  padding-left: 10px;
+}
+.faq .card .card-header .faq-title {
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #000000;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.faq .card .card-header .faq-title .badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 14px;
+  float: left;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  background: #e91e63;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.faq .card .card-body {
+  padding: 30px;
+  padding-left: 35px;
+  padding-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6f8ba4;
+  line-height: 28px;
+  letter-spacing: 1px;
+  border-top: 1px solid #f3f8ff;
+}
+
+.faq .card .card-body p {
+  margin-bottom: 14px;
+  /* color: #fff; */
+}
+
+@media (max-width: 991px) {
+  .faq {
+    margin-bottom: 30px;
+  }
+  .faq .card .card-header .faq-title {
+    line-height: 26px;
+    margin-top: 10px;
+  }
+}
 
 /* For screens smaller than 1024px */
 @media (max-width: 1024px) {
@@ -489,9 +623,9 @@ body {
   .service .content p {
     font-size: 1.2rem;
   }
-  .card {
+  /* .card {
     width: 300px;
-  }
+  } */
 }
 
 /* For screens smaller than 768px */
@@ -537,9 +671,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .card {
-    width: 80%;
-  }
 }
 
 /* For screens smaller than 425px */
@@ -562,9 +693,7 @@ body {
   .service .content p {
     font-size: 1.1rem;
   }
-  .card {
-    width: 80%;
-  }
+
   .card h3 {
     font-size: 1.4rem;
   }
@@ -597,9 +726,7 @@ body {
   .service .content p {
     font-size: 1.1rem;
   }
-  .card {
-    width: 85%;
-  }
+
   .card h3 {
     font-size: 1.3rem;
   }
@@ -620,9 +747,7 @@ body {
   .service .content p {
     font-size: 1rem;
   }
-  .card {
-    width: 90%;
-  }
+
   .card h3 {
     font-size: 1.2rem;
   }
