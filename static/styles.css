@@ -208,16 +208,18 @@ body {
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
+/* General styles for the service section */
 .service {
   background-color: #121212;
   color: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 40px 20px;
   text-align: center;
 }
+
 .service .content h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -232,7 +234,6 @@ body {
   margin: 0 auto 40px;
 }
 
-/* Cards container */
 .cards {
   display: flex;
   justify-content: center;
@@ -287,10 +288,6 @@ body {
   justify-content: center;
   color: #00d1ff;
   font-size: 1.2rem;
-}
-
-.card ul li i {
-  margin: 0;
 }
 
 .footer {
@@ -473,4 +470,167 @@ body {
 
 .social-icon:hover {
   color: #0077b5;
+}
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .navbar h1 {
+    font-size: 1.8vw;
+  }
+  .navbar-left .logo {
+    font-size: 30px;
+  }
+  .navbar-links a {
+    font-size: 16px;
+  }
+  .service .content h1 {
+    font-size: 2.8rem;
+  }
+  .service .content p {
+    font-size: 1.2rem;
+  }
+  .card {
+    width: 300px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 782px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .hero h1 {
+    font-size: 6vw;
+  }
+  .footer .top-section,
+  .footer .links-section {
+    flex-direction: column;
+  }
+
+  .footer .top-section input[type="email"],
+  .footer .top-section button {
+    width: 80%;
+    margin: 5px 0;
+  }
+  .service .content h1 {
+    font-size: 2.5rem;
+  }
+  .service .content p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
+
+/* For screens smaller than 425px */
+@media (max-width: 435px) {
+  .navbar h1 {
+    font-size: 5vw;
+  }
+  .navbar-left .logo {
+    font-size: 24px;
+  }
+  .navbar-links li {
+    margin: 0 10px;
+  }
+  .hero h1 {
+    font-size: 7vw;
+  }
+  .service .content h1 {
+    font-size: 2.2rem;
+  }
+  .service .content p {
+    font-size: 1.1rem;
+  }
+  .card {
+    width: 80%;
+  }
+  .card h3 {
+    font-size: 1.4rem;
+  }
+  .footer .links-section div {
+    padding: 0 10px;
+  }
+}
+
+/* For screens smaller than 375px */
+@media (max-width: 375px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .navbar-left .logo {
+    font-size: 20px;
+  }
+  .hero h1 {
+    font-size: 8vw;
+  }
+  .footer .links-section h3 {
+    font-size: 16px;
+  }
+  .footer .bottom-section p {
+    font-size: 12px;
+  }
+  .service .content h1 {
+    font-size: 2rem;
+  }
+  .service .content p {
+    font-size: 1.1rem;
+  }
+  .card {
+    width: 85%;
+  }
+  .card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* For screens smaller than 320px */
+@media (max-width: 320px) {
+  .navbar h1 {
+    font-size: 6vw;
+  }
+  .hero h1 {
+    font-size: 8.5vw;
+  }
+
+  .service .content h1 {
+    font-size: 1.8rem;
+  }
+  .service .content p {
+    font-size: 1rem;
+  }
+  .card {
+    width: 90%;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .footer .top-section input[type="email"],
+  .footer .top-section button {
+    width: 100%;
+  }
+  .footer .bottom-section p {
+    font-size: 10px;
+  }
 }
